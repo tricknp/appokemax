@@ -1,23 +1,25 @@
 <template>
-  <div>
     <div class="card">
-      <div ref="frontside" :class="frontsideClass">
+      <div 
+        ref="frontside" 
+        :class="frontsideClass"
+        @mouseenter="spin"
+      >
         <slot name="frontside" />
       </div>
 
       <div
         ref="backside"
         :class="`${backsideClass} card__backside--rotate-back`"
+        @mouseleave="spin"
       >
         <slot name="backside" />
       </div>
     </div>
-
-    <appmax-button @click="spin">
-      {{ buttonText }}
-    </appmax-button>
-  </div>
 </template>
+    <!-- <appmax-button @click="spin">
+      {{ buttonText }}
+    </appmax-button> -->
 
 <script>
 import AppmaxButton from '@/components/UI/Button.vue';

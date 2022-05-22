@@ -1,0 +1,53 @@
+.dropdown
+    width 210px
+    margin-top $size-tiny
+    position relative
+    transition all $transition-time-medium $transition-type-default
+
+    &:before
+        content ''
+        position absolute
+        top $size-tiny
+        right $size-tiny
+        cursor pointer
+        width $size-micro
+        height $size-micro
+        transform rotate(45deg)
+        z-index 999999999999
+        border-bottom $size-quark solid $lightGrey
+        border-right $size-quark solid $lightGrey
+
+    &__input
+        border 1px solid white
+        border-radius $size-nano
+        background white
+        padding 10px 20px
+        position relative
+        width 210px
+        cursor pointer
+        text-transform capitalize
+        
+    
+    &__content
+        @extend .vertical-center-column
+        text-transform capitalize
+        position absolute
+        z-index $high-index
+        background white
+        font-size $default-font
+        width 210px
+        max-height 150px
+        overflow-x auto
+        border-radius 0 0 $size-micro $size-micro
+        transition all $transition-type-default $transition-time-very-slow
+        box-shadow $shadow-default-size $highOpacity;
+
+        &__item
+            text-align center
+            width 100%
+            cursor pointer
+            padding $size-micro
+            transition ease $transition-time-fast all
+
+            &:hover
+                background $rock
