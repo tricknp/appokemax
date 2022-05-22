@@ -1,10 +1,5 @@
 <template>
-  <button 
-    :type="type" 
-    :disabled="disabled" 
-    :class="classes" 
-    v-on="$listeners"
-  >
+  <button :type="type" :disabled="disabled" :class="classes" v-on="$listeners">
     <slot />
   </button>
 </template>
@@ -60,13 +55,14 @@ export default {
   computed: {
     classes() {
       const mainClass = 'appmax-button';
+
       return [
         mainClass,
         `${mainClass}--theme-${this.theme}`,
         `${mainClass}--size-${this.size}`,
         `${mainClass}--${this.variant}`,
         this.fullWidth && `${mainClass}--full-width`,
-        this.disabled && `${mainClass}--disabled`
+        this.disabled && `${mainClass}--disabled`,
       ];
     },
   },
