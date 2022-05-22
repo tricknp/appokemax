@@ -1,0 +1,30 @@
+@keyframes spinLoader
+   to
+      transform rotate(1turn)
+
+.loading
+    @extend .fully-centered
+    width 100%
+    height auto
+    padding $size-special-small
+
+    &--small
+        --size $size-tiny
+    
+    &--medium
+        --size $size-special-small
+        height 290px
+    
+    &--large
+        --size $size-small
+
+    &:after
+        content ''
+        width var(--size)
+        height var(--size)
+        border 3px solid
+        border-color $rock $rock transparent transparent
+        border-radius 50%
+        animation spinLoader $transition-time-slow infinite linear
+
+
