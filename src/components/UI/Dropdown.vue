@@ -29,7 +29,6 @@ export default {
   props: {
     content: {
       type: Array,
-      required: true,
     },
 
     label: {
@@ -52,10 +51,6 @@ export default {
     };
   },
 
-  created() {
-    this.fillSelect();
-  },
-
   methods: {
     handleSelect(item) {
       this.selected = item.name;
@@ -67,13 +62,7 @@ export default {
     toggleDropdown() {
       this.open = !this.open;
       this.$emit('toggle');
-    },
-
-    fillSelect() {
-      if (!this.selected && this.content) {
-        this.selected = this.content[0].name;
-      }
-    },
+    }
   },
 };
 </script>

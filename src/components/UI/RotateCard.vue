@@ -2,7 +2,7 @@
     <div class="card">
       <div 
         ref="frontside" 
-        :class="frontsideClass"
+        :class="frontsideClasses"
         @mouseenter="spin"
       >
         <slot name="frontside" />
@@ -10,33 +10,27 @@
 
       <div
         ref="backside"
-        :class="`${backsideClass} card__backside--rotate-back`"
+        :class="`${backsideClasses} card__backside--rotate-back`"
         @mouseleave="spin"
       >
         <slot name="backside" />
       </div>
     </div>
 </template>
-    <!-- <appmax-button @click="spin">
-      {{ buttonText }}
-    </appmax-button> -->
 
 <script>
 import AppmaxButton from '@/components/UI/Button.vue';
 
 export default {
+  name: 'appmax-rotate-card',
+
   components: { AppmaxButton },
+
   props: {
     cardType: {
       type: String,
       required: false,
       default: 'normal',
-    },
-
-    buttonText: {
-      type: String,
-      required: false,
-      default: 'Girar',
     },
   },
 
@@ -51,11 +45,11 @@ export default {
       return (value) => `card__${value}side`;
     },
 
-    frontsideClass() {
+    frontsideClasses() {
       return `${this.cardSideClass('front')} bg-${this.cardType}`;
     },
 
-    backsideClass() {
+    backsideClasses() {
       return this.cardSideClass('back');
     },
   },

@@ -4,36 +4,24 @@
       <img
         class="presentation__background__image"
         src="https://images3.alphacoders.com/101/1018334.jpg"
-        alt=""
-        srcset=""
+        alt="Imagem de pokemon"
       />
-      <!-- src="https://i.pinimg.com/originals/6d/0a/fd/6d0afd4267722fb8d44b4b5f192095ae.jpg" -->
     </picture>
 
-    <div class="presentation__content">
-      <appmax-text variant="title">Bem vindo ao APPokemoMAX</appmax-text>
-      <appmax-text
-        >Conheça tudo sobre pokemons e aventure-se nessa jornada com a
-        gente</appmax-text
-      >
-
-      <appmax-button size="large" theme="secondary">
-        Explore por geração
-      </appmax-button>
-    </div>
-
-    <appmax-dropdown> </appmax-dropdown>
-    <rotate-card buttonText="Ver informações" />
+    <presentation-text />
+    
+    <main-content />
   </div>
 </template>
 
 <script>
-import RotateCard from "@/components/UI/RotateCard.vue";
-import AppmaxButton from "@/components/UI/Button.vue";
-import AppmaxText from "@/components/UI/Text.vue";
-import AppmaxDropdown from "@/components/UI/Dropdown.vue";
+import PresentationText from '@/components/home/PresentationText.vue';
+import MainContent from '@/components/home/MainContent.vue';
 
 export default {
-  components: { RotateCard, AppmaxButton, AppmaxText, AppmaxDropdown },
+  components: {  
+      PresentationText,
+      MainContent
+    }
 };
 </script>
