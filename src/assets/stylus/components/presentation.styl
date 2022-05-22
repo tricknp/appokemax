@@ -1,0 +1,58 @@
+.presentation
+    @extend .fully-centered-column
+    width 100%
+    height 100vh
+    
+    @media screen and (min-width $lg)
+        flex-direction row
+
+    &__background
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        filter blur(4px)
+        z-index -1
+        
+        &:before
+            content ''
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+            background $backgroundFilter
+            opacity .8
+
+        &__image
+            width 100%
+            height 100%
+            object-fit cover
+            z-index -1
+
+    &__content
+        padding $size-small 
+        padding-bottom $size-tiny
+        text-align center
+        
+        @media screen and (min-width $lg)
+            padding 0
+            width 500px
+            margin $size-none $size-small
+            
+
+h1, p
+ color $normal
+ 
+h1
+ font-size 32px
+ @media screen and (min-width $lg)
+    font-size 48px
+
+p 
+    font-size 16px
+    padding 15px
+    @media screen and (min-width $lg)
+        padding 30px 0
+        font-size 22px    

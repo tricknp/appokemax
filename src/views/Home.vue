@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <rotate-card />
+    <presentation />
   </div>
 </template>
 
 <script>
-import RotateCard from '@/components/UI/RotateCard.vue'
+import Presentation from "@/components/home/Presentation.vue";
 
 export default {
   components: {
-    RotateCard
-  }
+    Presentation,
+  },
 };
 </script>

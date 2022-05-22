@@ -1,5 +1,5 @@
 .appmax-button
-    border 1px solid $lightGrey
+    border 1px solid $normal
     transition $transition-time-fast $transition-type-socondary
 
     &--square
@@ -9,15 +9,15 @@
         border-radius $size-special-small
     
     &--theme-primary
-        background $lightGrey
-        color $normal
+        background $normal
+        color $lightGrey
         &:hover
-            background $normal
-            color $lightGrey
+            background $lightGrey
+            color $normal
 
     &--theme-secondary
         background transparent
-        color $lightGrey
+        color $normal
         &:hover
             background $normal
             color $lightGrey
@@ -33,6 +33,7 @@
     &--size-large
         width 250px
         padding $size-tiny
+        font-size 1.1rem
     
     &--full-width
         width 100% !important

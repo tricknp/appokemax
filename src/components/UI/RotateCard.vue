@@ -20,10 +20,10 @@
 </template>
 
 <script>
-import appmaxButton from '@/components/UI/Button.vue';
+import AppmaxButton from '@/components/UI/Button.vue';
 
 export default {
-  components: { appmaxButton },
+  components: { AppmaxButton },
   props: {
     cardType: {
       type: String,
