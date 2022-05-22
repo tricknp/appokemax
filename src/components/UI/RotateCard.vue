@@ -46,7 +46,10 @@ export default {
     },
 
     frontsideClasses() {
-      return `${this.cardSideClass('front')} bg-${this.cardType}`;
+      return [
+        this.cardSideClass('front'),
+        this.cardType && `bg-${this.cardType}`
+      ];
     },
 
     backsideClasses() {
