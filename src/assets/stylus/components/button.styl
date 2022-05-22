@@ -1,0 +1,42 @@
+.appmax-button
+    border 1px solid $lightGrey
+    transition $transition-time-fast $transition-type-socondary
+
+    &--square
+        border-radius $size-nano
+    
+    &--rounded
+        border-radius $size-special-small
+    
+    &--theme-primary
+        background $lightGrey
+        color $normal
+        &:hover
+            background $normal
+            color $lightGrey
+
+    &--theme-secondary
+        background transparent
+        color $lightGrey
+        &:hover
+            background $normal
+            color $lightGrey
+
+    &--size-small
+        width $size-default
+        padding $size-quark $size-nano
+    
+    &--size-medium
+        width 210px
+        padding $size-micro $size-tiny
+
+    &--size-large
+        width 250px
+        padding $size-tiny
+    
+    &--full-width
+        width 100% !important
+    
+    &--disabled
+        pointer-events none
+        opacity .7
