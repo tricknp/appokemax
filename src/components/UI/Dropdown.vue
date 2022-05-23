@@ -28,7 +28,7 @@ export default {
 
   props: {
     content: {
-      type: Array,
+      type: Array | String,
     },
 
     label: {

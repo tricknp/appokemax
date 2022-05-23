@@ -1,28 +1,26 @@
 <template>
+  <div>
     <div class="card">
-      <div 
-        ref="frontside" 
-        :class="frontsideClasses"
-        @mouseenter="spin"
-      >
+      <div ref="frontside" :class="frontsideClasses">
         <slot name="frontside" />
       </div>
 
       <div
         ref="backside"
         :class="`${backsideClasses} card__backside--rotate-back`"
-        @mouseleave="spin"
       >
         <slot name="backside" />
       </div>
     </div>
+    <appmax-button @click="spin">{{ buttonText }}</appmax-button>
+  </div>
 </template>
 
 <script>
-import AppmaxButton from '@/components/UI/Button.vue';
+import AppmaxButton from "@/components/UI/Button.vue";
 
 export default {
-  name: 'appmax-rotate-card',
+  name: "appmax-rotate-card",
 
   components: { AppmaxButton },
 
@@ -30,7 +28,12 @@ export default {
     cardType: {
       type: String,
       required: false,
-      default: 'normal',
+      default: "normal",
+    },
+    buttonText: {
+      type: String,
+      required: false,
+      default: 'Girar'
     },
   },
 
@@ -47,13 +50,13 @@ export default {
 
     frontsideClasses() {
       return [
-        this.cardSideClass('front'),
-        this.cardType && `bg-${this.cardType}`
+        this.cardSideClass("front"),
+        this.cardType && `bg-${this.cardType}`,
       ];
     },
 
     backsideClasses() {
-      return this.cardSideClass('back');
+      return this.cardSideClass("back");
     },
   },
 
@@ -67,8 +70,8 @@ export default {
     },
 
     toggleRotate(frontside, backside) {
-      const cardFrontside = this.cardSideClass('front');
-      const cardBackside = this.cardSideClass('back');
+      const cardFrontside = this.cardSideClass("front");
+      const cardBackside = this.cardSideClass("back");
 
       if (this.defaultSide) {
         frontside.classList.add(`${cardFrontside}--rotate-front`);

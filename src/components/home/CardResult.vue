@@ -2,11 +2,15 @@
   <div>
     <appmax-loader v-if="loading" />
 
-    <appmax-rotate-card v-else :cardType="typeName">
+    <appmax-rotate-card 
+        v-else 
+        :cardType="typeName"
+        buttonText="Mostrar detalhes"
+    >
       <div slot="frontside" class="card-result">
         <picture class="card-result__picture">
           <img
-            :src="pokemon && pokemon.sprites && pokemon.sprites.front_default"
+            :src="pokemon.sprites.front_default"
             alt=""
           />
         </picture>
@@ -78,8 +82,8 @@ export default {
       try {
         const { data } = await pokemonApi.getByName(selected);
         this.pokemon = data;
-      } catch (error) {
-        this.$emit("error", error);
+      } catch ({response}) {
+        this.$emit("error", response);
       } finally {
         this.showLoader(false);
       }
