@@ -11,7 +11,7 @@
         <picture class="card-result__picture">
           <img
             :src="pokemon.sprites.front_default"
-            alt=""
+            alt="imagem de um pokemon"
           />
         </picture>
 

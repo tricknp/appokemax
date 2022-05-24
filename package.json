@@ -24,9 +24,15 @@
     "@vue/vue2-jest": "^27.0.0-alpha.2",
     "babel-jest": "^27.0.6",
     "jest": "^27.0.5",
+    "jest-cli": "^25.1.0",
+    "jest-environment-jsdom-fifteen": "^1.0.2",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "jest-watch-typeahead": "^0.4.2",
     "stylus": "^0.55.0",
     "stylus-loader": "^6.1.0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vue-jest": "^3.0.5"
   },
   "browserslist": [
     "> 1%",
