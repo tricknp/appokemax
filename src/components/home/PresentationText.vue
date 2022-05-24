@@ -2,7 +2,7 @@
   <div class="presentation__content">
     <appmax-text variant="title">Bem vindo ao APPokemoMAX</appmax-text>
     <appmax-text>
-        Conheça tudo sobre pokemons e aventure-se nessa jornada com agente
+        Conheça tudo sobre pokemons e aventure-se nessa jornada com a gente
     </appmax-text>
 
     <appmax-button size="large" theme="secondary" @click=redirect>
