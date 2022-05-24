@@ -1,24 +1,25 @@
-# pokemon-max
+# APPokemonMAX
+Projeto demonstrativo com estatisticas de pokemons
 
-## Project setup
+## Setup do projeto
 ```
 yarn install
+
+cp .env .env-example
 ```
 
-### Compiles and hot-reloads for development
+### Para rodar em ambiente de desenvolvimento
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Buildando para produção
 ```
 yarn build
 ```
 
-### Run your unit tests
+### Para os testes unitários
 ```
 yarn test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
