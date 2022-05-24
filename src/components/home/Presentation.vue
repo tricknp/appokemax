@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import PresentationText from "@/components/home/PresentationText.vue";
-import MainContent from "@/components/home/MainContent.vue";
+import PresentationText from '@/components/home/PresentationText.vue';
+import MainContent from '@/components/home/MainContent.vue';
 
 export default {
   components: {

@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import pokemonApi from "@/api/requests/pokemon";
-import AppmaxDropdown from "@/components/UI/Dropdown.vue";
-import AppmaxText from "@/components/UI/Text.vue";
-import CardResult from "@/components/home/CardResult.vue";
+import pokemonApi from '@/api/requests/pokemon';
+import AppmaxDropdown from '@/components/UI/Dropdown.vue';
+import AppmaxText from '@/components/UI/Text.vue';
+import CardResult from '@/components/home/CardResult.vue';
 
 export default {
   components: {
@@ -29,7 +29,6 @@ export default {
       selected: 1,
     };
   },
-
 
   async created() {
     await this.getPokemons();

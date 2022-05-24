@@ -2,10 +2,10 @@
   <div>
     <appmax-loader v-if="loading" />
 
-    <appmax-rotate-card 
-        v-else 
-        :cardType="typeName"
-        buttonText="Mostrar detalhes"
+    <appmax-rotate-card
+      v-else
+      :cardType="typeName"
+      buttonText="Mostrar detalhes"
     >
       <div slot="frontside" class="card-result">
         <picture class="card-result__picture">
@@ -36,10 +36,10 @@
 </template>
 
 <script>
-import pokemonApi from "@/api/requests/pokemon";
-import AppmaxRotateCard from "@/components/UI/RotateCard.vue";
-import AppmaxLoader from "@/components/UI/Loader.vue";
-import { loading } from "@/mixins/loading";
+import pokemonApi from '@/api/requests/pokemon';
+import AppmaxRotateCard from '@/components/UI/RotateCard.vue';
+import AppmaxLoader from '@/components/UI/Loader.vue';
+import { loading } from '@/mixins/loading';
 
 export default {
   components: { AppmaxRotateCard, AppmaxLoader },
@@ -82,8 +82,8 @@ export default {
       try {
         const { data } = await pokemonApi.getByName(selected);
         this.pokemon = data;
-      } catch ({response}) {
-        this.$emit("error", response);
+      } catch ({ response }) {
+        this.$emit('error', response);
       } finally {
         this.showLoader(false);
       }
