@@ -1,8 +1,8 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import Button from '@/components/UI/Button.vue';
 
 function mountComponent(propsData) {
-    return shallowMount(Button, { propsData });
+    return mount(Button, { propsData });
 }
 
 describe('Button.vue', () => {

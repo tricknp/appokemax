@@ -12,7 +12,7 @@
         <slot name="backside" />
       </div>
     </div>
-    <appmax-button @click="spin">{{ buttonText }}</appmax-button>
+    <appmax-button @click="spin" ref="card-button">{{ buttonText }}</appmax-button>
   </div>
 </template>
 
